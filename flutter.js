@@ -69,6 +69,7 @@ _flutter.loader = null;
           let scriptTag = document.createElement("script");
           scriptTag.src = entrypointUrl;
           scriptTag.type = "application/javascript";
+          scriptTag.crossOrigin = "anonymous";
           // Cache the resolve, so it can be called from Flutter.
           // Note: Flutter hot restart doesn't re-create this promise, so this
           // can only be called once. Instead, we need to model this as a stream
