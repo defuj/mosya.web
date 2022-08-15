@@ -42,7 +42,7 @@ _flutter.loader = null;
      */
     loadEntrypoint(options) {
       const {
-        entrypointUrl = "moysa.web/main.dart.js",
+        entrypointUrl = "main.dart.js",
         serviceWorker,
       } = (options || {});
       return this._loadWithServiceWorker(entrypointUrl, serviceWorker);
@@ -112,7 +112,7 @@ _flutter.loader = null;
         timeoutMillis = 4000,
       } = serviceWorkerOptions;
 
-      let serviceWorkerUrl = "moysa.web/flutter_service_worker.js?v=" + serviceWorkerVersion;
+      let serviceWorkerUrl = "flutter_service_worker.js?v=" + serviceWorkerVersion;
       let loader = navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
             if (!reg.active && (reg.installing || reg.waiting)) {
